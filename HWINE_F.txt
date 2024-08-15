@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일수 계산기</title>
+</head>
+<body>
+    <h1>HWINE 제조일 2024년 3월 30일부터 오늘까지 경과한 일수:</h1>
+    <p id="days"></p>
+
+    <script>
+        function calculateDays() {
+            const startDate = new Date("2024-03-30");
+            const today = new Date();
+            const timeDifference = today - startDate;
+            const daysPassed = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            return daysPassed;
+        }
+
+        document.getElementById("days").innerText = calculateDays() + "일";
+    </script>
+</body>
+</html>
+
